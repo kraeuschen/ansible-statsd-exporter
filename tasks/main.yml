@@ -27,7 +27,7 @@
 
 - name: create systemd script
   template:
-    src: statsd_exporter.service.j2
+    src: "{{ statsd_exporter_systemd_template }}"
     dest: /etc/systemd/system/statsd_exporter.service
   notify: restart statsd exporter
 
